@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <h1 id="display">クイズ<br />藤永の趣味は次のうちどれでしょう？</h1>
+    <img
+      src="https://msp.c.yimg.jp/images/v2/FUTi93tXq405grZVGgDqG-xDq6NMUZA590viUSL7E1t9Dafn3bT2ssvzeTVSVhA8y4iZTldufLUyozbcCsSNUZ_rmMkeFNHHnvcQF3BECZa5N303_iVPhzDEEXqXr2Lhd0XRgvS1dkUzsTp1yDMALIBChlLTJjw6LO2QPrAUJkOmnhB4skm__wUKy4a7PA8XoPAu1aivy-X05EsU8j9_eGRss8CphO5JzE_MJoq4Tog9MHTU0xSYGwHKzNMRzPLq2v8odAFROotc70h4V6yEEOEGblS7yIdIHMVLocYFsFryjrNBw9iXW4gDGS-NANVS/1327-600x600.jpg"
+      alt=""
+      id="myimage"
+    /><br />
+    <button id="button1">スノボ</button>
+    <button id="button2">映画鑑賞</button>
+    <button id="button3">読書</button>
+    <div id="element"></div>
+    <script>
+      //3択になるように三つのボタンを作成
+      const button1 = document.getElementById("button1")
+      const button2 = document.getElementById("button2")
+      const button3 = document.getElementById("button3")
+
+      //正解かどうかを表示させる
+      const judge = document.getElementById("element")
+      const imgchange = document.getElementById("myimage")
+
+      //正解をクリックした時正解と表示させたい
+      button1.onclick = function () {
+        judge.textContent = "正解！！！１"
+        // imgchange.setAttribute('src', 'https://msp.c.yimg.jp/images/v2/FUTi93tXq405grZVGgDqG-3TyT_d3-W7T5K7icNPDBNXqxG1RqIQZyhZHRASsmrKddtrnLBqUTDFx2qpz8tm0FwHGA4ECelq4TZjSlpmV0lpBGs-X5EJb642b54gWobzOm-JqIDvZ_q4chxXzaicqQ_GAM__o1BaIyAHmtgCAbGMEFK9rj0Y7LLyCqdJczYeXGj0Z3M2WZIW-mJveG3_f1YGFhH6RqTC_q1eFRk5JI0vr_6r-P8iXrCWNWBivuitPQ_HIohbMUAkYHQCLXHWu4-uEG-gAgBSb8TWVj_Mgf_Z0v45KUnrImYwri7tUKh9vBVTz8xoMSea4JA-Cd1nvw==/202210211641141645643093-884x600.jpeg');
+        imgchange.src =
+          "https://msp.c.yimg.jp/images/v2/FUTi93tXq405grZVGgDqG-3TyT_d3-W7T5K7icNPDBNXqxG1RqIQZyhZHRASsmrKddtrnLBqUTDFx2qpz8tm0FwHGA4ECelq4TZjSlpmV0lpBGs-X5EJb642b54gWobzOm-JqIDvZ_q4chxXzaicqQ_GAM__o1BaIyAHmtgCAbGMEFK9rj0Y7LLyCqdJczYeXGj0Z3M2WZIW-mJveG3_f1YGFhH6RqTC_q1eFRk5JI0vr_6r-P8iXrCWNWBivuitPQ_HIohbMUAkYHQCLXHWu4-uEG-gAgBSb8TWVj_Mgf_Z0v45KUnrImYwri7tUKh9vBVTz8xoMSea4JA-Cd1nvw==/202210211641141645643093-884x600.jpeg"
+      }
+      button2.onclick = function () {
+        judge.textContent = "不正解です😭"
+      }
+      button3.onclick = function () {
+        judge.textContent = "不正解です😭"
+      }
+    </script>
+  </body>
+</html>
